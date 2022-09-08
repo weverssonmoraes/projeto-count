@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./App.css";
+import { Logo } from "./components/Logo";
 
 function App() {
   const [numero, setNumero] = useState(0);
@@ -14,10 +15,13 @@ function App() {
   }
 
   return (
-    <div className="buttons">
-      <button onClick={handleMinus}>-</button>
-      <div className="number">{numero}</div>
-      <button onClick={handleMore}>+</button>
+    <div className="mae">
+      <Logo />
+      <div className="buttons">
+        <button onClick={handleMinus}>-</button>
+        <div className="number">{numero}</div>
+        <button onClick={handleMore}>+</button>
+      </div>
     </div>
   );
 }
